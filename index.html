@@ -1,155 +1,207 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIGMA Livraison Express - Lubumbashi</title>
   <style>
     :root {
       --primary: #e60000;
       --dark: #1a1a1a;
-      --light: #f4f4f4;
-      --accent: #ffffff;
+      --light: #f9f9f9;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--light);
       color: var(--dark);
-      line-height: 1.6;
     }
+
     header {
-      background: var(--primary);
+      background-color: var(--primary);
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 2rem 1rem 1rem;
     }
+
     header img {
-      height: 70px;
-      margin-bottom: 10px;
+      max-height: 80px;
+      margin-bottom: 1rem;
     }
+
+    header h2 {
+      font-size: 1.6rem;
+    }
+
     .hero {
-      background: linear-gradient(to right, rgba(230, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-        url('https://images.unsplash.com/photo-1581092918361-9c74b63f54bb?auto=format&fit=crop&w=1500&q=80') center/cover;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      background: linear-gradient(to right, rgba(230, 0, 0, 0.85), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1581092918361-9c74b63f54bb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       color: white;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 20px;
     }
+
     .hero h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 4px #000000aa;
+      font-size: 2.3rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      margin-bottom: 1rem;
     }
+
     .hero p {
       max-width: 800px;
-      margin-top: 20px;
-      font-size: 1.1rem;
-      padding: 0 20px;
+      font-size: 1rem;
+      line-height: 1.8;
     }
+
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2.5rem 1rem;
       background-color: white;
     }
+
     .feature {
-      background: #ffffff;
-      border-radius: 12px;
+      background-color: #fff;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
+
     .feature:hover {
       transform: translateY(-5px);
     }
+
     .feature img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
+
     .feature p {
-      padding: 15px;
-    }
-    .cta {
+      padding: 1rem;
       text-align: center;
-      padding: 50px 20px;
-      background: var(--primary);
-      color: white;
+      font-weight: 500;
     }
+
+    .cta {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .cta h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .cta .phone {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
     .cta button {
       background: white;
       color: var(--primary);
       border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     .cta button:hover {
-      background: #ddd;
+      background: #f2f2f2;
     }
+
     footer {
-      background: var(--dark);
+      background-color: var(--dark);
       color: white;
       text-align: center;
-      padding: 20px;
       font-size: 0.9rem;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .cta h2 {
+        font-size: 1.5rem;
+      }
+
+      .cta button {
+        width: 100%;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Logo Sigma">
+    <img src="logo.png" alt="Logo Sigma" />
     <h2>SIGMA - Livraison Express à Lubumbashi</h2>
   </header>
 
   <section class="hero">
     <h1>Livraison rapide, fiable et 100% locale</h1>
     <p>
-      🚚 <strong>SIGMA</strong> est un service de livraison uniquement. Nous ne produisons ni ne vendons de nourriture, vêtements ou tout autre produit. 
-      <br><br>
-      Nous venons simplement récupérer vos colis, achats ou repas chez vos fournisseurs ou restaurants préférés pour les livrer rapidement à vos clients, amis ou proches, partout dans Lubumbashi.
-      <br><br>
-      Merci de ne pas nous appeler pour commander des produits. Veuillez contacter directement le commerçant ou le restaurant concerné. SIGMA s’occupe uniquement du transport express sécurisé. 🙏
+      🚚 <strong>SIGMA</strong> est un service de livraison uniquement. Nous ne vendons pas de nourriture, vêtements ou autres produits.
+      <br /><br />
+      Nous venons chercher vos commandes chez vos fournisseurs, restos ou commerçants préférés, puis nous les livrons à vos clients, proches ou amis dans toute la ville.
+      <br /><br />
+      Merci de contacter directement les vendeurs. Nous assurons uniquement le transport sécurisé. 🙏
     </p>
   </section>
 
   <section class="features">
     <div class="feature">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.SnaKr8cp2FsNFVCfCAY1igHaI_?pid=Api" alt="Lubumbashi centre">
-      <p>Service 100% local avec couverture intégrale de Lubumbashi</p>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.SnaKr8cp2FsNFVCfCAY1igHaI_?pid=Api" alt="Lubumbashi centre" />
+      <p>Couverture complète de Lubumbashi</p>
     </div>
     <div class="feature">
-      <img src="https://tse3.mm.bing.net/th/id/OIP._x5Cf-Z4Fbk6J-l4u9Hr5gHaE8?r=0&pid=Api" alt="Livreur moto">
-      <p>Livraisons express en moto partout en ville</p>
+      <img src="https://tse3.mm.bing.net/th/id/OIP._x5Cf-Z4Fbk6J-l4u9Hr5gHaE8?r=0&pid=Api" alt="Livreur moto" />
+      <p>Livraisons express en moto 7j/7</p>
     </div>
   </section>
 
   <section class="cta">
     <h2>Commandez votre livraison maintenant</h2>
-    <p>Disponible 7j/7 de 7h à 21h</p>
+    <p>Disponible tous les jours de 7h à 21h</p>
+    <p class="phone">📞 +243 850 646 066</p>
     <button onclick="contactWhatsApp()">📲 Commander sur WhatsApp</button>
   </section>
 
   <footer>
-    &copy; 2025 Sigma Livraison – Lubumbashi | WhatsApp : +243 89 XXX XX XX
+    &copy; 2025 Sigma Livraison – Lubumbashi | WhatsApp : +243 850 646 066
   </footer>
 
   <script>
     function contactWhatsApp() {
-      window.open('https://wa.me/243890000000?text=Bonjour%20Sigma%20!%20Je%20souhaite%20commander%20une%20livraison.', '_blank');
+      window.open('https://wa.me/243850646066?text=Bonjour%20Sigma%20!%20Je%20souhaite%20commander%20une%20livraison.', '_blank');
     }
   </script>
+
 </body>
 </html>
